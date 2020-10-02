@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let number =+prompt('nhap number');
+    let number0=0;
+    let number1=1;
+    let nextnumber;
+    alert(isFibonacci(number));
+    function isFibonacci(n){
+        if (n===0 || n===1) {
+            return true;
+        }
+        let arr=[];
+        arr[0]=number0;
+        arr[1]=number1;
+        nextnumber=number0+number1;
+        while (nextnumber<=n) {
+            arr.push(nextnumber);
+            number0=number1;
+            number1=nextnumber;
+            nextnumber=number0+number1;
+        }
+
+        if (arr[arr.length-1]===n ){
+            return true;
+        } else {
+            return false
+        }
+    }
+</script>
